@@ -2,17 +2,24 @@
 <html>
 	<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+		<style>
+		    #record-birthdays{
+		     display:none;   
+		    }
+		</style>
 	</head>
 
 	<body>
-		<h3>Record a New Birthday:</h3>
-		<form action="index.html" onsubmit="logBirthday()">
-			<input type="text" name="firstName"> 
-			<input type="text" name="lastName">
-			<input type="date" name="date">
-			<input type="submit">
- 		</form>
-		<script src = "birthday-data.js"></script>
+	    <h1>Birthday Tracker!</h1>
+	    <form onsubmit="checkBirthday()">
+    	    <p>Want to add a friends birthday? <a href = "birthday.html">Click here.</a></p>
+			<input type="date" name="dateQuery">
+				<input type="submit">
+	    </form>
+	    <hr>
+	    <div id = "record-birthdays">
+	        <h3>Friends Who Have that Birthday:</h3>
+	    </div>
+	    <script src = "birthday-data.js"></script>
 	</body>
 </html>
